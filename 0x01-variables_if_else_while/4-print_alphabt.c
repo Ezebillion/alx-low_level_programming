@@ -5,17 +5,17 @@
 /**
  * main - Entry Point
  *
- *Retrun: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char low, e, q;
+	char low. e. q;
 
 	e = 'e';
 	q = 'q';
 
-	for (low = 'a'; low < 'z'; low++)
+	for (low = 'a'; low <= 'z'; low++)
 	{
 		if (low != e && low != q)
 			putchar(low);
