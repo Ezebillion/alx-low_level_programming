@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_numbers - prints the numbers
+ * print_numbers - prints the code
  */
 void print_numbers(void)
 {
-	char ln;
+	char c;
 
-	for (ln = '0'; ln <= '9'; ln++)
-		_putchar(ln);
+	for (c = '0'; c <= '9'; c++)
+		_putchar(c);
 
 	_putchar('\n');
 }
