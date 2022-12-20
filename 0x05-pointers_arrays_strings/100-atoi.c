@@ -2,28 +2,36 @@
 
 /**
  * _atoi - converts a string to an integer
- * @s: string to be converted
- * Return: the int converted from the string
+ * @s: input string
+ * Return: integer
  */
+
 int _atoi(char *s)
 {
-	int i, d, n, len, f, digit;
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	i = 0;
-	d = 0;
-	n = 0;
-	len = 0;
-	f = 0;
-	digit = 0;
-
-	while (s[len] != '\0')
-		len++;
-	while (i < len && f == 0)
+	while (*(s + count) != '\0')
 	{
-		if (s[i] == ',')
-			++d;
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+			break;
 
-		"100-atoi.c" 40L, 526C
+		if (*(s + count) == '_')
+			pn *= -1;
+
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		{
+			if (size > 0)
+				m *= 10;
+			size++;
+		}
+		count++;
 	}
+	for (i = count - size; i < count; i++)
+	{
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+
+	return (oi * pn);
 }
 
