@@ -6,7 +6,7 @@
  *
  * @b: buffer
  * @size: size of buffer
- * Return: no return
+ * Return: Always 0
  */
 
 void print_buffer(char *b, int size)
